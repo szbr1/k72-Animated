@@ -3,6 +3,7 @@ import K72LOGO from "../__components/K72LOGO";
 import Video from "../__components/Video";
 
 export default function Home() {
+  
   return (
   <div className="h-screen w-full relative">
      

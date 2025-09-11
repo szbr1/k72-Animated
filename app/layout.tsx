@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./(main)/globals.css"
 import { Lausanne } from "@/lib/FontFile";
 
 export const metadata: Metadata = {
