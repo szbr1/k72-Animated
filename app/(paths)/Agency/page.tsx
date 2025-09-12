@@ -1,5 +1,6 @@
 'use client'
 import K72LOGO from "@/app/__components/K72LOGO";
+import Stairs from "@/components/Stairs";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -27,7 +28,7 @@ function page() {
         pin: true,
         trigger: ImageContainerRef.current,
         start: "top 20%",
-        end: "bottom -50%",
+        end: "bottom -100%",
         scrub: true,
         onUpdate: (e)=>{
           const imageOrder =  Math.floor(e.progress * images.length)
@@ -40,8 +41,8 @@ function page() {
     })
   },[])
   return (
-    <div className="min-h-screen w-full relative font-Lausanne bg-black text-white ">
-
+    <div className="min-h-screen w-full relative font-Lausanne bg-white text-black ">
+      <Stairs />
       {/* logo  */}
       <div className="absolute top-2 left-2"><K72LOGO color="#ffffff" /></div>
 
@@ -53,15 +54,16 @@ function page() {
       </div>
       
       <div className="h-screen w-full   flex flex-col gap-3 justify-center items-center ">
-        <h1 className="text-[18.5vw] mt-[54%] relative  uppercase  leading-[14vw] ">
+        <h1 className="text-[18.5vw] text-black mt-[80%] relative  uppercase  leading-[14vw] ">
           Soixan7e <br />
           Douze
         </h1>
-        <h5 className="pl-[40%] text-4xl relative">
-          Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante. Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage à donner de la perspective, pour bâtir des marques influentes.
+        <h5 className="pl-[40%] text-6xl relative text-black">
+          &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante. Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage à donner de la perspective, pour bâtir des marques influentes.
         </h5>
       </div>
 
+      <div className="h-screen w-full "></div>
       <div className="h-screen w-full "></div>
     </div>
   );
