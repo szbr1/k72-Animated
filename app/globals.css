@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Lausanne';
+  src: url("/Font/nano.woff2") format("woff2");
+  font-weight: 300; /* Define a single font-weight */
+  font-style: normal;
+  font-display: swap; /* Best practice to prevent layout shift */
+}
+
+
+
+
+:root{
+  color: white
+}
+
+@theme {
+  --color-yellow: #D3FD50;
+  --font-Lausanne: var(--font-Lausanne), sans-serif;
+}
+
+.scrl:hover {
+  animation:  moveAnimation infinite 25s linear ;
+}
+@keyframes moveAnimation {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+  
+}
