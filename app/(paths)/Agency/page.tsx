@@ -1,5 +1,5 @@
 'use client'
-import K72LOGO from "@/app/__components/K72LOGO";
+import K72LOGO from "@/app/(paths)/__components/K72LOGO";
 import Stairs from "@/components/Stairs";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -34,6 +34,7 @@ function page() {
           const imageOrder =  Math.floor(e.progress * images.length)
           if(ImageRef.current && imageOrder < 7){
             console.log(imageOrder)
+            //@ts-ignore
             ImageRef.current.src = images[imageOrder]
           }          
         }
